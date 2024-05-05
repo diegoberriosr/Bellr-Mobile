@@ -1,5 +1,6 @@
-import 'package:bellr_mobile/features/auth/view/login_view.dart';
-import 'package:bellr_mobile/features/auth/view/register_view.dart';
+import 'package:bellr_mobile/features/auth/views/login_view.dart';
+import 'package:bellr_mobile/features/auth/views/register_view.dart';
+import 'package:bellr_mobile/features/home/views/feed.dart';
 import 'package:flutter/material.dart';
 import 'package:bellr_mobile/theme/theme.dart';
 
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.theme,
-      initialRoute: '/login',
+      initialRoute: '/home',
       routes : {
+        '/home' : (context) => const Feed(),
         '/login' : (context) => const LoginView(),
         '/register' : (context) => const RegisterView(),
       }
